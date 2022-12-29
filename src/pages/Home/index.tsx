@@ -1,7 +1,17 @@
-const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+import { Button } from "antd";
 
-export default Home
+const Home = () => {
+	return (
+		<>
+			<Button
+				type="primary"
+				className="rounded-full"
+			>
+				Hello!!
+			</Button>
+			<button className="rounded-full">Save Changes</button>
+		</>
+	);
+};
+
+export default Home;
