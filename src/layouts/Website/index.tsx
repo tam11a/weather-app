@@ -1,14 +1,22 @@
-import { Outlet } from "react-router-dom";
-import WebsiteFooter from "./Footer";
-import WebsiteHeader from "./Header";
+import React from "react";
 
-const WebsiteLayout = () => {
+const WebsiteHeader = React.lazy(() => import("./Header"));
+const WebsiteFooter = React.lazy(() => import("./Footer"));
+
+import { Outlet } from "react-router-dom";
+import { Layout } from "antd";
+
+const WebsiteLayout: React.FC = () => {
 	return (
-		<>
-			<WebsiteHeader />
-			<Outlet />
-			<WebsiteFooter />
-		</>
+		<Layout.Content className="md:container mx-auto max-w-lg h-screen flex flex-col p-2">
+			<div className="grow flex max-h-full flex-col shadow-lg shadow-[#0a0a0a] p-2">
+				<WebsiteHeader />
+				<div className="grow">
+					<Outlet />
+				</div>
+				<WebsiteFooter />
+			</div>
+		</Layout.Content>
 	);
 };
 

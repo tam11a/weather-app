@@ -1,8 +1,7 @@
+import React from "react";
 
-const WebsiteFooter = () => {
-  return (
-    <div>WebsiteFooter</div>
-  )
-}
+const WebsiteFooter: React.FC = () => {
+	return <div className="text-center">Powered By Tam11a.</div>;
+};
 
-export default WebsiteFooter
+export default WebsiteFooter;

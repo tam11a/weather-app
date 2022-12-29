@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 
 // 3rd Party Modules
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./publicRoutes";
 
 // Layouts
-import WebsiteLayout from "@layouts/Website";
+const WebsiteLayout = lazy(() => import("@layouts/Website"));
 
 const BaseRoutes = () => {
 	return (

@@ -9,9 +9,13 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@tanstack/react-query": "4.20.4",
 		"antd": "^4.24.6",
+		"axios-http": "0.0.1-security",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-hook-form": "7.41.2",
+		"react-icons": "^4.7.1",
 		"react-router-dom": "6.4.3"
 	},
 	"devDependencies": {
